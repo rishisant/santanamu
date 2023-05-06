@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<!-- 
+                            Rishi's Web Page. Duh. You should know that by now. But hey, nice to meet you. Hope you're doing alright.
+                            You must know something about computers to have even though to look at the source code. So, I'll just say this:
+                            I hope you enjoy my presence. You'll definitely see me around more. This won't be the end. This is only the beginning.
+-->
+
+<html>
+    <head>
+        <title>R. Santhanam</title>
+        <link rel="stylesheet" href="./base.css">
+        <link rel="icon" href="./favicon.ico">
+    </head>
+
+    <script>
+
+        function changeboxto(param)
+        {
+            // alert(param);
+            // change boxcontainer display to block
+            document.getElementsByClassName("boxcontainer")[0].style.display = "block";
+            if (param == 1) {
+                // change boxtitle innerhtml to about me
+                document.getElementById("boxtitle").innerHTML = "about me.";
+                // change boxtext to display:block
+                document.getElementById("boxtext").style.display = "block";
+                // change randompic display to none and picturetext display to none
+                document.getElementById("randompic").style.display = "none";
+                document.getElementById("picturetext").style.display = "none";
+
+            }
+            else if (param == 2){
+                
+                // random life picture
+                // generate random number from 1-10
+                var randomnumber = Math.floor(Math.random() * 10) + 1;
+                var randompicture = "url('./img/" + randomnumber + ".JPG')";
+
+                // now put the picture in the box
+                document.getElementById("randompic").src = "./img/" + randomnumber + ".JPG";
+                document.getElementById("randompic").style.display = "block";
+
+                // change randompic display to block and picturetext display to block
+                // document.getElementById("randompic").style.display = "block";
+                document.getElementById("picturetext").style.display = "block";
+                // change boxtext to display:none
+                document.getElementById("boxtext").style.display = "none";
+
+                // change contactlinks display to none
+                document.getElementById("contactlinks").style.display = "none";
+
+
+                if (randomnumber == 1){
+                    // change boxtitle innerhtml to
+                    document.getElementById("boxtitle").innerHTML = "quaint little town.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES河口湖:探検";
+                } else if (randomnumber == 2)
+                {
+                    // change boxtitle to fuji
+                    document.getElementById("boxtitle").innerHTML = "fuji's delight.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES河口湖:山腹";
+                } else if (randomnumber == 3)
+                {
+                    // boxtitle kawaguchiko
+                    document.getElementById("boxtitle").innerHTML = "kawaguchiko.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES河口湖:水色";
+                } else if (randomnumber == 4)
+                {
+                    // boxtitle jz
+                    document.getElementById("boxtitle").innerHTML = "scholars?";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES大学:友達";
+                } else if (randomnumber == 5)
+                {
+                    document.getElementById("boxtitle").innerHTML = "ring dunk.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES大学:麦酒";
+                }
+                else if (randomnumber == 6)
+                {
+                    document.getElementById("boxtitle").innerHTML = "out soon.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES大学:卒業"
+                } else if (randomnumber == 7){ 
+                    document.getElementById("boxtitle").innerHTML = "think fast.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES自分:実戦";
+                } else if (randomnumber == 8) {
+                    document.getElementById("boxtitle").innerHTML = "where the magic happens.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES自分:部屋";
+                } else if (randomnumber == 9) {
+                    document.getElementById("boxtitle").innerHTML = "freshman flow.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES自分:髪型";
+                } else if (randomnumber == 10) {
+                    // boxtitle 
+                    document.getElementById("boxtitle").innerHTML = "eki.";
+                    document.getElementById("picturetext").innerHTML = "Part of SERIES河口湖:駅";
+                }
+
+            } else if (param == 3) {
+                // change boxtitle innerhtml to contact links
+                document.getElementById("boxtitle").innerHTML = "contact links.";
+                // change boxtext to display:block
+                document.getElementById("boxtext").style.display = "none";
+                // change randompic display to none and picturetext display to none
+                document.getElementById("randompic").style.display = "none";
+                document.getElementById("picturetext").style.display = "none";
+
+                // change contactlinks display to block
+                document.getElementById("contactlinks").style.display = "block";
+            }
+        }
+
+    </script>
+
+    <body>
+        <div id="intro">
+            rishi santhanam.
+            <br>ரிஷி சந்தனம்.
+        </div>
+
+        <div id="choicebarrier">
+            <div class="choice" onclick="changeboxto(1)">
+                about me.
+            </div>
+            <div class="choice" onclick="changeboxto(2)">
+                random life picture.
+            </div>
+            <div class="choice" onclick="changeboxto(3)">
+                contact links.
+            </div>
+        </div>
+
+        <div class="boxcontainer" style="display: none">
+            <div id="boxtitle">
+                about me.
+            </div>
+            <div id="picturecontainer">
+                <img id="randompic" src="./img/1.JPG" style="display: none"> <div id="picturetext" style="display: none"></div>
+            </div>
+            <div id="boxtext" val="aboutme" >
+                what do you want to know? how much do you want to know? both great questions. maybe not with much of an answer. i could talk all day in a cryptic way...
+                not sure if you would want to hear that, though. so here's a brief summary of me. first off, i love God. other than that, i am an enjoyer of sport,
+                whether mental or physical. 
+                <br>
+                <br>
+                i enjoy minimal design. i study history and i enjoy keeping the past alive. i feel like we're in a world where culture shifts too rapidly. i mostly attribute
+                this to social media. a mishmash of new and old sans novelty nor charm. mass-engagement in filth.
+                <br>
+                <br>
+                anyways, back to the summary. born in palm springs, california. moved to texas when i was three. grew up there for the most part. been around the world quite a bit.
+                love learning about different cultures. speaker of five languages, master of none.
+                <br>
+                <br>
+                play basketball and football, work out, run, and box. dislikes schopenhauer. not a big fan of newton. we obviously don't live on a gl-
+            </div>
+            <div id="contactlinks" val="contactlinks" style="display: none">
+                linkedin: <a href="https://www.linkedin.com/in/santanamu/">click here</a>
+                <br>
+                <br>
+                email: <a href="mailto:santanamu001@gmail.com">send here</a>
+            </div>
+        </div>
+
+    </body>
+
+    <footer>
+
+    </footer>
+</html>

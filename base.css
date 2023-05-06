@@ -1,0 +1,109 @@
+/* 
+    Base.css
+    Author: @youknowwho,dummy
+
+    So, you're stalking me more now, huh? You really must enjoy playing these games.
+    Let me stay cryptic, though. I'd rather you not be able to analyze my ability.
+    I'm quite incredible, let me just say that. But not for the reasons you may think.
+
+    Anyways, sit back and enjoy the show. I know I will.
+*/
+
+/* MAIN PAGE */
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5em;
+}
+
+#intro {
+    margin: 1em;
+    margin-bottom: 2em;
+}
+
+#choicebarrier {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    animation: move_on_and_off_page 10s infinite;
+}
+
+/* make the choice buttons have a pointer:cursor and look slightly different from the traditional text */
+.choice {
+    font-size: .8em;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+.choice:hover {
+    background-color: #e6e6e6;
+}
+
+@keyframes move_on_and_off_page {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.1% {
+        transform: translateX(100%);
+    }
+    90% {
+        transform: translateX(0%);
+    }
+    100% {
+
+    }
+}
+
+/* END MAIN PAGE */
+
+/* SUBTITLES */
+
+.boxcontainer {
+    background-color: #ededed;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    margin-top: 3em;
+    margin-left: 5em;
+    margin-right: 5em;
+
+    margin-bottom: 2em;
+}
+
+#boxtitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#boxtext {
+    font-size: .8em;
+}
+
+#randompic {
+    width: 35%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#picturecontainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+}
+#picturetext {
+    font-size: .8em;
+    margin-left: 2em;
+}
+
+#contactlinks {
+    font-size: .8em;
+}
